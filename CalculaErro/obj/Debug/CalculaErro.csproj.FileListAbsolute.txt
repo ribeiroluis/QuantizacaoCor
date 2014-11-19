@@ -1,0 +1,5 @@
+C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\CalculaErro\bin\Debug\CalculaErro.dll
+C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\CalculaErro\bin\Debug\CalculaErro.pdb
+C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\CalculaErro\obj\Debug\CalculaErro.csprojResolveAssemblyReference.cache
+C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\CalculaErro\obj\Debug\CalculaErro.dll
+C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\CalculaErro\obj\Debug\CalculaErro.pdb
