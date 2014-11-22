@@ -1,6 +1,4 @@
 C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\bin\Debug\Teste.exe.config
-C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\Teste.exe
-C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\Teste.pdb
 C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\bin\Debug\Teste.exe
 C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\bin\Debug\Teste.pdb
 C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\bin\Debug\AlgoritmoOctree.dll
@@ -11,7 +9,9 @@ C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\bin\D
 C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\bin\Debug\AlgoritmoOctree.pdb
 C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\bin\Debug\CalculaErro.pdb
 C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\bin\Debug\Frequencia.pdb
-C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\AnaliseImagens.csprojResolveAssemblyReference.cache
-C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\AnaliseImagens.AnaliseImagens.resources
+C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\Teste.csprojResolveAssemblyReference.cache
+C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\Teste.Form1.resources
 C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\Teste.Properties.Resources.resources
-C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\AnaliseImagens.csproj.GenerateResource.Cache
+C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\Teste.csproj.GenerateResource.Cache
+C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\Teste.exe
+C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\Teste\obj\Debug\Teste.pdb

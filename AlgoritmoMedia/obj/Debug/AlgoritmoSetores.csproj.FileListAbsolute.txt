@@ -1,4 +1,4 @@
-C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoMedia\bin\Debug\AlgoritmoSetores.dll
-C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoMedia\bin\Debug\AlgoritmoSetores.pdb
-C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoMedia\obj\Debug\AlgoritmoSetores.dll
-C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoMedia\obj\Debug\AlgoritmoSetores.pdb
+C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoMedia\bin\Debug\AlgoritmoSetores.dll
+C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoMedia\bin\Debug\AlgoritmoSetores.pdb
+C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoMedia\obj\Debug\AlgoritmoSetores.dll
+C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoMedia\obj\Debug\AlgoritmoSetores.pdb
