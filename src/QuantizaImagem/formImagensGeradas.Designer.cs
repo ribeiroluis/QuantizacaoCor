@@ -68,25 +68,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.medianaOctree = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tempoQuantizacaoOctree = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.qtdCoresQuantizada = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.varianciaDivisao = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.desvioPadraoDivisao = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tempoQuantizacaoDivisao = new System.Windows.Forms.TextBox();
-            this.mediaDivisao = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.modaDivisao = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.medianaDivisao = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.medianaDivisao = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.modaDivisao = new System.Windows.Forms.TextBox();
+            this.mediaDivisao = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.desvioPadraoDivisao = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.varianciaDivisao = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.imagemOgirinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagemQuantizadaOctree)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagemErroOctree)).BeginInit();
@@ -221,7 +217,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.graficoErroQuantizacao);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 378);
+            this.panel1.Location = new System.Drawing.Point(0, 439);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(965, 226);
             this.panel1.TabIndex = 31;
@@ -273,9 +269,7 @@
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.desvioPadraoOctree);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.tempoQuantizacaoOctree);
             this.panel4.Controls.Add(this.mediaOctree);
-            this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.modaOctree);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
@@ -289,16 +283,16 @@
             // varianciaOctree
             // 
             this.varianciaOctree.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.varianciaOctree.Location = new System.Drawing.Point(86, 109);
+            this.varianciaOctree.Location = new System.Drawing.Point(91, 115);
             this.varianciaOctree.Name = "varianciaOctree";
             this.varianciaOctree.ReadOnly = true;
-            this.varianciaOctree.Size = new System.Drawing.Size(57, 20);
+            this.varianciaOctree.Size = new System.Drawing.Size(50, 20);
             this.varianciaOctree.TabIndex = 23;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 112);
+            this.label14.Location = new System.Drawing.Point(31, 118);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 13);
             this.label14.TabIndex = 22;
@@ -307,16 +301,16 @@
             // desvioPadraoOctree
             // 
             this.desvioPadraoOctree.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.desvioPadraoOctree.Location = new System.Drawing.Point(91, 5);
+            this.desvioPadraoOctree.Location = new System.Drawing.Point(91, 9);
             this.desvioPadraoOctree.Name = "desvioPadraoOctree";
             this.desvioPadraoOctree.ReadOnly = true;
-            this.desvioPadraoOctree.Size = new System.Drawing.Size(59, 20);
+            this.desvioPadraoOctree.Size = new System.Drawing.Size(50, 20);
             this.desvioPadraoOctree.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 8);
+            this.label1.Location = new System.Drawing.Point(8, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 20;
@@ -325,25 +319,25 @@
             // mediaOctree
             // 
             this.mediaOctree.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mediaOctree.Location = new System.Drawing.Point(89, 31);
+            this.mediaOctree.Location = new System.Drawing.Point(91, 37);
             this.mediaOctree.Name = "mediaOctree";
             this.mediaOctree.ReadOnly = true;
-            this.mediaOctree.Size = new System.Drawing.Size(59, 20);
+            this.mediaOctree.Size = new System.Drawing.Size(50, 20);
             this.mediaOctree.TabIndex = 17;
             // 
             // modaOctree
             // 
             this.modaOctree.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.modaOctree.Location = new System.Drawing.Point(91, 83);
+            this.modaOctree.Location = new System.Drawing.Point(91, 89);
             this.modaOctree.Name = "modaOctree";
             this.modaOctree.ReadOnly = true;
-            this.modaOctree.Size = new System.Drawing.Size(57, 20);
+            this.modaOctree.Size = new System.Drawing.Size(50, 20);
             this.modaOctree.TabIndex = 19;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 86);
+            this.label4.Location = new System.Drawing.Point(48, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 15;
@@ -352,7 +346,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 31);
+            this.label3.Location = new System.Drawing.Point(49, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 14;
@@ -361,38 +355,20 @@
             // medianaOctree
             // 
             this.medianaOctree.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.medianaOctree.Location = new System.Drawing.Point(89, 57);
+            this.medianaOctree.Location = new System.Drawing.Point(91, 63);
             this.medianaOctree.Name = "medianaOctree";
             this.medianaOctree.ReadOnly = true;
-            this.medianaOctree.Size = new System.Drawing.Size(59, 20);
+            this.medianaOctree.Size = new System.Drawing.Size(50, 20);
             this.medianaOctree.TabIndex = 18;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 60);
+            this.label5.Location = new System.Drawing.Point(34, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 16;
             this.label5.Text = "Mediana:";
-            // 
-            // tempoQuantizacaoOctree
-            // 
-            this.tempoQuantizacaoOctree.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tempoQuantizacaoOctree.Location = new System.Drawing.Point(86, 135);
-            this.tempoQuantizacaoOctree.Name = "tempoQuantizacaoOctree";
-            this.tempoQuantizacaoOctree.ReadOnly = true;
-            this.tempoQuantizacaoOctree.Size = new System.Drawing.Size(62, 20);
-            this.tempoQuantizacaoOctree.TabIndex = 10;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(8, 138);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(72, 13);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Tempo gasto:";
             // 
             // qtdCoresQuantizada
             // 
@@ -411,134 +387,6 @@
             this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 36;
             this.label2.Text = "Qtd Cores Quantizada:";
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.varianciaDivisao);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.desvioPadraoDivisao);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.tempoQuantizacaoDivisao);
-            this.panel2.Controls.Add(this.mediaDivisao);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.modaDivisao);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.medianaDivisao);
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Location = new System.Drawing.Point(676, 216);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 150);
-            this.panel2.TabIndex = 36;
-            // 
-            // varianciaDivisao
-            // 
-            this.varianciaDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.varianciaDivisao.Location = new System.Drawing.Point(86, 109);
-            this.varianciaDivisao.Name = "varianciaDivisao";
-            this.varianciaDivisao.ReadOnly = true;
-            this.varianciaDivisao.Size = new System.Drawing.Size(57, 20);
-            this.varianciaDivisao.TabIndex = 23;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 112);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Variância:";
-            // 
-            // desvioPadraoDivisao
-            // 
-            this.desvioPadraoDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.desvioPadraoDivisao.Location = new System.Drawing.Point(91, 5);
-            this.desvioPadraoDivisao.Name = "desvioPadraoDivisao";
-            this.desvioPadraoDivisao.ReadOnly = true;
-            this.desvioPadraoDivisao.Size = new System.Drawing.Size(59, 20);
-            this.desvioPadraoDivisao.TabIndex = 21;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 13);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Desvio Padrão:";
-            // 
-            // tempoQuantizacaoDivisao
-            // 
-            this.tempoQuantizacaoDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tempoQuantizacaoDivisao.Location = new System.Drawing.Point(86, 135);
-            this.tempoQuantizacaoDivisao.Name = "tempoQuantizacaoDivisao";
-            this.tempoQuantizacaoDivisao.ReadOnly = true;
-            this.tempoQuantizacaoDivisao.Size = new System.Drawing.Size(62, 20);
-            this.tempoQuantizacaoDivisao.TabIndex = 10;
-            // 
-            // mediaDivisao
-            // 
-            this.mediaDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mediaDivisao.Location = new System.Drawing.Point(89, 31);
-            this.mediaDivisao.Name = "mediaDivisao";
-            this.mediaDivisao.ReadOnly = true;
-            this.mediaDivisao.Size = new System.Drawing.Size(59, 20);
-            this.mediaDivisao.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 138);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Tempo gasto:";
-            // 
-            // modaDivisao
-            // 
-            this.modaDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.modaDivisao.Location = new System.Drawing.Point(91, 83);
-            this.modaDivisao.Name = "modaDivisao";
-            this.modaDivisao.ReadOnly = true;
-            this.modaDivisao.Size = new System.Drawing.Size(57, 20);
-            this.modaDivisao.TabIndex = 19;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(48, 86);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(37, 13);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "Moda:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(46, 31);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 13);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "Média:";
-            // 
-            // medianaDivisao
-            // 
-            this.medianaDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.medianaDivisao.Location = new System.Drawing.Point(89, 57);
-            this.medianaDivisao.Name = "medianaDivisao";
-            this.medianaDivisao.ReadOnly = true;
-            this.medianaDivisao.Size = new System.Drawing.Size(59, 20);
-            this.medianaDivisao.TabIndex = 18;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(34, 60);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(51, 13);
-            this.label19.TabIndex = 16;
-            this.label19.Text = "Mediana:";
             // 
             // label20
             // 
@@ -560,12 +408,120 @@
             this.label21.TabIndex = 39;
             this.label21.Text = "Informações Divisão";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(37, 70);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 13);
+            this.label19.TabIndex = 16;
+            this.label19.Text = "Mediana:";
+            // 
+            // medianaDivisao
+            // 
+            this.medianaDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.medianaDivisao.Location = new System.Drawing.Point(94, 67);
+            this.medianaDivisao.Name = "medianaDivisao";
+            this.medianaDivisao.ReadOnly = true;
+            this.medianaDivisao.Size = new System.Drawing.Size(50, 20);
+            this.medianaDivisao.TabIndex = 18;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(49, 44);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(39, 13);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Média:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(51, 96);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 13);
+            this.label16.TabIndex = 15;
+            this.label16.Text = "Moda:";
+            // 
+            // modaDivisao
+            // 
+            this.modaDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.modaDivisao.Location = new System.Drawing.Point(94, 93);
+            this.modaDivisao.Name = "modaDivisao";
+            this.modaDivisao.ReadOnly = true;
+            this.modaDivisao.Size = new System.Drawing.Size(50, 20);
+            this.modaDivisao.TabIndex = 19;
+            // 
+            // mediaDivisao
+            // 
+            this.mediaDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.mediaDivisao.Location = new System.Drawing.Point(94, 41);
+            this.mediaDivisao.Name = "mediaDivisao";
+            this.mediaDivisao.ReadOnly = true;
+            this.mediaDivisao.Size = new System.Drawing.Size(50, 20);
+            this.mediaDivisao.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Desvio Padrão:";
+            // 
+            // desvioPadraoDivisao
+            // 
+            this.desvioPadraoDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.desvioPadraoDivisao.Location = new System.Drawing.Point(94, 15);
+            this.desvioPadraoDivisao.Name = "desvioPadraoDivisao";
+            this.desvioPadraoDivisao.ReadOnly = true;
+            this.desvioPadraoDivisao.Size = new System.Drawing.Size(50, 20);
+            this.desvioPadraoDivisao.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(37, 122);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Variância:";
+            // 
+            // varianciaDivisao
+            // 
+            this.varianciaDivisao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.varianciaDivisao.Location = new System.Drawing.Point(94, 119);
+            this.varianciaDivisao.Name = "varianciaDivisao";
+            this.varianciaDivisao.ReadOnly = true;
+            this.varianciaDivisao.Size = new System.Drawing.Size(50, 20);
+            this.varianciaDivisao.TabIndex = 23;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.varianciaDivisao);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.desvioPadraoDivisao);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.mediaDivisao);
+            this.panel2.Controls.Add(this.modaDivisao);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.medianaDivisao);
+            this.panel2.Controls.Add(this.label19);
+            this.panel2.Location = new System.Drawing.Point(676, 216);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(196, 150);
+            this.panel2.TabIndex = 36;
+            // 
             // formImagensGeradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(965, 604);
+            this.ClientSize = new System.Drawing.Size(965, 665);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.panel2);
@@ -625,9 +581,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox desvioPadraoOctree;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tempoQuantizacaoOctree;
         private System.Windows.Forms.TextBox mediaOctree;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox modaOctree;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -635,20 +589,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox qtdCoresQuantizada;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox varianciaDivisao;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox desvioPadraoDivisao;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tempoQuantizacaoDivisao;
-        private System.Windows.Forms.TextBox mediaDivisao;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox modaDivisao;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox medianaDivisao;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox medianaDivisao;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox modaDivisao;
+        private System.Windows.Forms.TextBox mediaDivisao;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox desvioPadraoDivisao;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox varianciaDivisao;
+        private System.Windows.Forms.Panel panel2;
     }
 }

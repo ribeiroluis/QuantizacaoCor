@@ -1,24 +1,16 @@
-﻿using AlgoritimoDivisaoSetores;
-using AlgoritmoOctree;
-using FrequenciaCor;
-using CalculaErro;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuantizaImagem;
+using AlgoritimoDivisaoSetores;
+using AlgoritmoOctree;
+using CalculaErro;
+using FrequenciaCor;
 
-
-namespace ColorQuantization
+namespace QuantizaImagem
 {
     public partial class QuantizaImagem : Form
     {
-        bool OctreeQuantizado;
         bool DivisaoQuantizado;
         double erroMedioDivisao;
         Octree quantizaOctree;
@@ -27,7 +19,8 @@ namespace ColorQuantization
         int quantidadeCoresDivisao = 0;
         Quantizacao objQuantizadoDivisao;
         Quantizacao objQuantizadoOctree;
-        Form formHistogramasObj, formImagemQuantizadaOctree, formImagemQuantizadaDivisao, formImagensGeradas;
+        Form _formHistogramasObj, _formImagemQuantizadaOctree, _formImagemQuantizadaDivisao, _formImagensGeradas;
+        private bool _octreeQuantizado;
 
         public QuantizaImagem()
         {
@@ -36,7 +29,7 @@ namespace ColorQuantization
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnQuantizaOctree_Click(object sender, EventArgs e)
@@ -49,19 +42,19 @@ namespace ColorQuantization
                 if (quantizaOctree == null)
                     QuantizaOctree();
 
-                if (formImagemQuantizadaOctree != null)
+                if (_formImagemQuantizadaOctree != null)
                 {
-                    formImagemQuantizadaOctree.Dispose();
-                    formImagemQuantizadaOctree.Close();
+                    _formImagemQuantizadaOctree.Dispose();
+                    _formImagemQuantizadaOctree.Close();
                 }
 
 
-                formImagemQuantizadaOctree = new formImagemQuantizada("Octree", objQuantizadoOctree);
-                formImagemQuantizadaOctree.Show();
+                _formImagemQuantizadaOctree = new formImagemQuantizada("Octree", objQuantizadoOctree);
+                _formImagemQuantizadaOctree.Show();
 
 
-                OctreeQuantizado = true;
-                habilitarDesabilitarPainel();
+                _octreeQuantizado = true;
+                HabilitarDesabilitarPainel();
 
                 
 
@@ -84,16 +77,16 @@ namespace ColorQuantization
                     QuantizaDivisao();
 
 
-                if (formImagemQuantizadaDivisao != null)
+                if (_formImagemQuantizadaDivisao != null)
                 {
-                    formImagemQuantizadaDivisao.Dispose();
-                    formImagemQuantizadaDivisao.Close();
+                    _formImagemQuantizadaDivisao.Dispose();
+                    _formImagemQuantizadaDivisao.Close();
                 }
 
 
 
-                formImagemQuantizadaDivisao = new formImagemQuantizada("Divisão Setores", objQuantizadoDivisao);
-                formImagemQuantizadaDivisao.Show();
+                _formImagemQuantizadaDivisao = new formImagemQuantizada("Divisão Setores", objQuantizadoDivisao);
+                _formImagemQuantizadaDivisao.Show();
 
                 
 
@@ -112,8 +105,10 @@ namespace ColorQuantization
             {
                 LimpaObjetos();
 
-                OpenFileDialog abrirImagem = new OpenFileDialog();
-                abrirImagem.Filter = "Arquivos de imagem(*.bmp, *.jpg, *.png)|*.bmp;*.jpg; *.png";
+                var abrirImagem = new OpenFileDialog
+                {
+                    Filter = "Arquivos de imagem(*.bmp, *.jpg, *.png)|*.bmp;*.jpg; *.png"
+                };
                 abrirImagem.ShowDialog();
                 abrirImagem.Multiselect = false;
                 ImagemOriginal = new Bitmap(abrirImagem.FileName);
@@ -135,9 +130,9 @@ namespace ColorQuantization
 
         }
 
-        private void habilitarDesabilitarPainel()
+        private void HabilitarDesabilitarPainel()
         {
-            if (DivisaoQuantizado && OctreeQuantizado)
+            if (DivisaoQuantizado && _octreeQuantizado)
             {
                 pnOpcoes.Visible = true;
             }
@@ -151,16 +146,16 @@ namespace ColorQuantization
         {
             try
             {
-                if (formImagensGeradas != null)
+                if (_formImagensGeradas != null)
                 {
-                    formImagensGeradas.Dispose();
-                    formImagensGeradas.Close();
+                    _formImagensGeradas.Dispose();
+                    _formImagensGeradas.Close();
                 }
 
 
 
-                formImagensGeradas = new formImagensGeradas(objQuantizadoOctree, objQuantizadoDivisao);
-                formImagensGeradas.Show();
+                _formImagensGeradas = new formImagensGeradas(objQuantizadoOctree, objQuantizadoDivisao);
+                _formImagensGeradas.Show();
 
             }
             catch (Exception)
@@ -172,33 +167,30 @@ namespace ColorQuantization
 
         private void btnHistogramas_Click(object sender, EventArgs e)
         {
-            if (formHistogramasObj != null)
+            if (_formHistogramasObj != null)
             {
-                formHistogramasObj.Dispose();
-                formHistogramasObj.Close();
+                _formHistogramasObj.Dispose();
+                _formHistogramasObj.Close();
             }
 
 
 
-            formHistogramasObj = new formHistogramas(objQuantizadoOctree, objQuantizadoDivisao);
-            formHistogramasObj.Show();
+            _formHistogramasObj = new formHistogramas(objQuantizadoOctree, objQuantizadoDivisao);
+            _formHistogramasObj.Show();
 
         }
 
-        private int ContaCores(Bitmap imagem)
+        private static int ContaCores(Bitmap imagem)
         {
             var listaCor = new List<Color>();
 
-            for (int linha = 0; linha < imagem.Height; linha++)
+            for (var linha = 0; linha < imagem.Height; linha++)
             {
-                for (int coluna = 0; coluna < imagem.Width; coluna++)
+                for (var coluna = 0; coluna < imagem.Width; coluna++)
                 {
                     var cor = imagem.GetPixel(coluna, linha);
-                    if (!listaCor.Contains(cor))
-                    {
-                        listaCor.Add(cor);
-                    }
-
+                    if (listaCor.Contains(cor)) continue;
+                    listaCor.Add(cor);
                 }
 
             }
@@ -217,13 +209,14 @@ namespace ColorQuantization
                 var histograma = new Frequencia();
                 objQuantizadoDivisao = new Quantizacao();
 
-                this.erroMedioDivisao = erro.Media;
-                this.quantidadeCoresDivisao = quantizaDivisao.RecuperaPaletaCorQuantizada().Count;
+                erroMedioDivisao = erro.Media;
+                quantidadeCoresDivisao = quantizaDivisao.RecuperaPaletaCorQuantizada().Count;
 
                 objQuantizadoDivisao.QuantidadeCoresOriginal = int.Parse(qtdCoresOriginal.Text);
-                objQuantizadoDivisao.QuantidadeCoresQuantizadas = this.quantidadeCoresDivisao;
+                quantidadeCoresDivisao = objQuantizadoDivisao.QuantidadeCoresQuantizadas;
                 objQuantizadoDivisao.CoresQuantizadas = quantizaDivisao.RecuperaPaletaCorQuantizada();
 
+                
                 objQuantizadoDivisao.DesvioPadrao = erro.DesvioPadrao;
                 objQuantizadoDivisao.Media = erro.Media;
                 objQuantizadoDivisao.Mediana = erro.Mediana;
@@ -235,6 +228,7 @@ namespace ColorQuantization
                 objQuantizadoDivisao.ImagemOriginal = ImagemOriginal;
                 objQuantizadoDivisao.ImagemQuantizada = quantizaDivisao.ImagemQuantizada;
                 objQuantizadoDivisao.ImagemErro = erro.GeraImagemErrro(erroMedioDivisao);
+                objQuantizadoDivisao.ErroPorPixel = erro.ErroPorPixel;
                 
                 objQuantizadoDivisao.HistogramaImagemOriginal = new List<int[]>();
                 objQuantizadoDivisao.HistogramaImagemQuantizada = new List<int[]>();
@@ -246,7 +240,7 @@ namespace ColorQuantization
                 objQuantizadoDivisao.HistogramaImagemQuantizada.Add(histograma.GetFrequencia(quantizaDivisao.ImagemQuantizada, "B"));
 
                 DivisaoQuantizado = true;
-                habilitarDesabilitarPainel();
+                HabilitarDesabilitarPainel();
 
             }
 
@@ -273,6 +267,7 @@ namespace ColorQuantization
                 objQuantizadoOctree.QuantidadeCoresOriginal = int.Parse(qtdCoresOriginal.Text);
                 objQuantizadoOctree.QuantidadeCoresQuantizadas = quantidadeCoresDivisao;
                 objQuantizadoOctree.CoresQuantizadas = quantizaOctree.RecuperaPaletaCorQuantizada();
+
                 
                 objQuantizadoOctree.DesvioPadrao = erro.DesvioPadrao;
                 objQuantizadoOctree.Media = erro.Media;
@@ -285,6 +280,7 @@ namespace ColorQuantization
                 objQuantizadoOctree.ImagemOriginal = ImagemOriginal;
                 objQuantizadoOctree.ImagemQuantizada = quantizaOctree.ImagemQuantizada;
                 objQuantizadoOctree.ImagemErro = erro.GeraImagemErrro(erroMedioDivisao);
+                objQuantizadoOctree.ErroPorPixel = erro.ErroPorPixel;
 
                 objQuantizadoOctree.HistogramaImagemOriginal = new List<int[]>();
                 objQuantizadoOctree.HistogramaImagemQuantizada = new List<int[]>();
@@ -296,8 +292,8 @@ namespace ColorQuantization
                 objQuantizadoOctree.HistogramaImagemQuantizada.Add(histograma.GetFrequencia(quantizaOctree.ImagemQuantizada, "B"));
                 
 
-                OctreeQuantizado = true;
-                habilitarDesabilitarPainel();
+                _octreeQuantizado = true;
+                HabilitarDesabilitarPainel();
 
             }
             catch (Exception)
@@ -318,29 +314,29 @@ namespace ColorQuantization
             objQuantizadoOctree = null;
 
             DivisaoQuantizado = false;
-            OctreeQuantizado = false;
-            habilitarDesabilitarPainel();
+            _octreeQuantizado = false;
+            HabilitarDesabilitarPainel();
 
             
-            if (formHistogramasObj != null)
+            if (_formHistogramasObj != null)
             {
-                formHistogramasObj.Dispose();
-                formHistogramasObj.Close();
+                _formHistogramasObj.Dispose();
+                _formHistogramasObj.Close();
             }
-            if (formImagemQuantizadaOctree != null)
+            if (_formImagemQuantizadaOctree != null)
             {
-                formImagemQuantizadaOctree.Dispose();
-                formImagemQuantizadaOctree.Close();
+                _formImagemQuantizadaOctree.Dispose();
+                _formImagemQuantizadaOctree.Close();
             }
-            if (formImagemQuantizadaDivisao != null)
+            if (_formImagemQuantizadaDivisao != null)
             {
-                formImagemQuantizadaDivisao.Dispose();
-                formImagemQuantizadaDivisao.Close();
+                _formImagemQuantizadaDivisao.Dispose();
+                _formImagemQuantizadaDivisao.Close();
             }
-            if (formImagensGeradas != null)
+            if (_formImagensGeradas != null)
             {
-                formImagensGeradas.Dispose();
-                formImagensGeradas.Close();
+                _formImagensGeradas.Dispose();
+                _formImagensGeradas.Close();
             }
         }
 

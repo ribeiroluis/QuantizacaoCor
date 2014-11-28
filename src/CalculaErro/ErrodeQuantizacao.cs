@@ -23,6 +23,7 @@ namespace CalculaErro
         private double _desvioPadraoErroQuantizacao;
         private double _varianciaErroQuantizacao;
         private double _modaErroQuantizacao;
+        private double _erroPorPixel = 0;
 
         public Bitmap ImagemOriginal
         {
@@ -32,11 +33,10 @@ namespace CalculaErro
         {
             set { _imagemQuantizada = value; }
         }
-
         public double DesvioPadrao
         {
             get
-            {   
+            {
                 return _desvioPadraoErroQuantizacao;
             }
         }
@@ -68,8 +68,12 @@ namespace CalculaErro
                 return _varianciaErroQuantizacao;
             }
         }
+        public double ErroPorPixel
+        {
+            get { return _erroPorPixel; }
+        }
 
-        
+
         /// <summary>
         /// Construtor da classe
         /// </summary>
@@ -89,7 +93,6 @@ namespace CalculaErro
 
         }
 
-
         /// <summary>
         /// Gera a imagem Erro, mostrando os pontos em vermelho onde houve a distancia superior 
         /// ao erro Médio passado como parâmetro
@@ -99,15 +102,29 @@ namespace CalculaErro
         public Bitmap GeraImagemErrro(double erro)
         {
             _imagemErroQuantizacao = new Bitmap(_imagemOriginal.Width, _imagemOriginal.Height);
+            double contaErro = 0;
 
             for (var linha = 0; linha < _imagemOriginal.Width; linha++)
             {
                 for (var coluna = 0; coluna < _imagemOriginal.Height; coluna++)
                 {
-                    _imagemErroQuantizacao.SetPixel(coluna, linha,
-                        _matrizErroGerada[coluna, linha] > erro ? Color.Red : Color.White);
+                    //_imagemErroQuantizacao.SetPixel(coluna, linha,
+                    //    _matrizErroGerada[coluna, linha] > erro ? Color.Red : Color.White);
+                    if (_matrizErroGerada[coluna, linha] > erro)
+                    {
+                        _imagemErroQuantizacao.SetPixel(coluna, linha, Color.Red);
+                        contaErro++; 
+                    }
+                    else
+                        _imagemErroQuantizacao.SetPixel(coluna, linha, Color.White);
+
                 }
             }
+
+
+            double qtdPixels = _imagemOriginal.Width * _imagemOriginal.Height;
+            _erroPorPixel = contaErro / qtdPixels;
+
             return _imagemErroQuantizacao;
         }
 

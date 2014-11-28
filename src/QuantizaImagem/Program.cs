@@ -17,7 +17,7 @@ namespace ColorQuantization
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuantizaImagem());
+            Application.Run(new QuantizaImagem.QuantizaImagem());
         }
     }
 }

@@ -50,6 +50,7 @@ namespace QuantizaImagem
             tempoQuantizacao.Text = objquantizacao.TempoQuantizacao.Milliseconds.ToString() + "ms";
             qtdCoresOriginal.Text = objquantizacao.QuantidadeCoresOriginal.ToString();
             qtdCoresQuantizada.Text = objquantizacao.CoresQuantizadas.Count.ToString();
+            erroPorPixel.Text = objquantizacao.ErroPorPixel.ToString("P");
         }
 
         private void CarregaHistogramas()

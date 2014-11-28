@@ -1,4 +1,4 @@
-﻿namespace ColorQuantization
+﻿namespace QuantizaImagem
 {
     partial class QuantizaImagem
     {
@@ -301,7 +301,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ToolTip toolTipInfo;
         private System.Windows.Forms.Label label3;
-
     }
 }
 

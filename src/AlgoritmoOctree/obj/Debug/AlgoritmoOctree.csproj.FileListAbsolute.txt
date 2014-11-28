@@ -1,4 +1,4 @@
-C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoOctree\bin\Debug\AlgoritmoOctree.dll
-C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoOctree\bin\Debug\AlgoritmoOctree.pdb
-C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoOctree\obj\Debug\AlgoritmoOctree.dll
-C:\Users\Luis\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoOctree\obj\Debug\AlgoritmoOctree.pdb
+C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoOctree\bin\Debug\AlgoritmoOctree.dll
+C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoOctree\bin\Debug\AlgoritmoOctree.pdb
+C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoOctree\obj\Debug\AlgoritmoOctree.dll
+C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\AlgoritmoOctree\obj\Debug\AlgoritmoOctree.pdb

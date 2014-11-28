@@ -15,6 +15,7 @@ namespace QuantizaImagem
         public double Moda { get; set; }
         public double Variancia { get; set; }
         public TimeSpan TempoQuantizacao { get; set; }
+        public double ErroPorPixel { get; set; }
 
         public Bitmap ImagemOriginal { get; set; }
         public Bitmap ImagemQuantizada { get; set; }

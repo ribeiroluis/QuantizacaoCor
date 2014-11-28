@@ -15,6 +15,7 @@ namespace AnaliseImagens
         public double Moda { get; set; }
         public double Variancia { get; set; }
         public int TempoQuantizacao { get; set; }
+        public double ErrosPorPixel { get; set; }
 
         public Bitmap ImagemOriginal { get; set; }
         public Bitmap ImagemQuantizada { get; set; }

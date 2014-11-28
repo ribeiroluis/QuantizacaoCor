@@ -35,7 +35,7 @@ namespace AnaliseImagens
         {
             try
             {
-                var quantizaDivisao = new AlgoritimoSetores(imagem, 2); //dois setores
+                var quantizaDivisao = new AlgoritimoSetores(imagem, 10); //dez setores
                 var erro = new ErrodeQuantizacao(imagem, quantizaDivisao.ImagemQuantizada);
                 var objQuantizadoDivisao = new Quantizacao();
 
@@ -56,6 +56,7 @@ namespace AnaliseImagens
                 objQuantizadoDivisao.ImagemOriginal = imagem;
                 objQuantizadoDivisao.ImagemQuantizada = quantizaDivisao.ImagemQuantizada;
                 objQuantizadoDivisao.ImagemErro = erro.GeraImagemErrro(erroMedioDivisao);
+                objQuantizadoDivisao.ErrosPorPixel = erro.ErroPorPixel;
 
                 listaQuantizadoDivisao.Add(objQuantizadoDivisao);
 
@@ -86,9 +87,6 @@ namespace AnaliseImagens
                 var erro = new ErrodeQuantizacao(imagem, quantizaOctree.ImagemQuantizada);
                 var objQuantizadoOctree = new Quantizacao();
 
-                this.qtdCoresDivisao = quantizaOctree.RecuperaPaletaCorQuantizada().Count;
-                this.erroMedioDivisao = erro.Media;
-
                 objQuantizadoOctree.QuantidadeCoresOriginal = qtdCoresOriginal;
                 objQuantizadoOctree.QuantidadeCoresQuantizadas = this.qtdCoresDivisao;
 
@@ -103,6 +101,7 @@ namespace AnaliseImagens
                 objQuantizadoOctree.ImagemOriginal = imagem;
                 objQuantizadoOctree.ImagemQuantizada = quantizaOctree.ImagemQuantizada;
                 objQuantizadoOctree.ImagemErro = erro.GeraImagemErrro(erroMedioDivisao);
+                objQuantizadoOctree.ErrosPorPixel = erro.ErroPorPixel;
 
                 listaQuantizadoOctree.Add(objQuantizadoOctree);
 
@@ -176,9 +175,11 @@ namespace AnaliseImagens
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (i >= 100){
+            if (i >= 5){
                 timer1.Enabled = false;
                 dataDivisao.DataSource = listaQuantizadoDivisao;
+                var formOctree = new ResultadoOctree(listaQuantizadoOctree);
+                formOctree.Show();
                 imgOriginal.Visible = false;
             }
                 
