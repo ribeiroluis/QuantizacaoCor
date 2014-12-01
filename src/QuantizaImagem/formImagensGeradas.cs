@@ -32,15 +32,19 @@ namespace QuantizaImagem
             medianaOctree.Text = QuantizadoOctree.Mediana.ToString();
             modaOctree.Text = QuantizadoOctree.Moda.ToString();
             varianciaOctree.Text = QuantizadoOctree.Variancia.ToString();
+            erroOctree.Text = QuantizadoOctree.ErroPorPixel.ToString("P");
+
 
             desvioPadraoDivisao.Text = QuantizadoDivisao.DesvioPadrao.ToString();
             mediaDivisao.Text = QuantizadoDivisao.Media.ToString();
             medianaDivisao.Text = QuantizadoDivisao.Mediana.ToString();
             modaDivisao.Text = QuantizadoDivisao.Moda.ToString();
             varianciaDivisao.Text = QuantizadoDivisao.Variancia.ToString();
+            erroDivisao.Text = QuantizadoDivisao.ErroPorPixel.ToString("P");
 
             qtdCoresOriginal.Text = QuantizadoOctree.QuantidadeCoresOriginal.ToString();
             qtdCoresQuantizada.Text = QuantizadoOctree.QuantidadeCoresQuantizadas.ToString();
+
         }
 
         private void CarregaImagens()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 using AlgoritimoDivisaoSetores;
 using AlgoritmoOctree;
@@ -180,24 +181,18 @@ namespace QuantizaImagem
 
         }
 
-        private static int ContaCores(Bitmap imagem)
+        private int ContaCores(Bitmap imagem)
         {
-            var listaCor = new List<Color>();
-
+            var colors = new HashSet<Color>();
             for (var linha = 0; linha < imagem.Height; linha++)
             {
                 for (var coluna = 0; coluna < imagem.Width; coluna++)
                 {
-                    var cor = imagem.GetPixel(coluna, linha);
-                    if (listaCor.Contains(cor)) continue;
-                    listaCor.Add(cor);
+                    colors.Add(imagem.GetPixel(coluna, linha));
                 }
 
             }
-
-
-            return listaCor.Count;
-
+            return colors.Count;
         }
 
         private void QuantizaDivisao()
@@ -210,10 +205,10 @@ namespace QuantizaImagem
                 objQuantizadoDivisao = new Quantizacao();
 
                 erroMedioDivisao = erro.Media;
-                quantidadeCoresDivisao = quantizaDivisao.RecuperaPaletaCorQuantizada().Count;
+                this.quantidadeCoresDivisao = quantizaDivisao.RecuperaPaletaCorQuantizada().Count;
 
                 objQuantizadoDivisao.QuantidadeCoresOriginal = int.Parse(qtdCoresOriginal.Text);
-                quantidadeCoresDivisao = objQuantizadoDivisao.QuantidadeCoresQuantizadas;
+                objQuantizadoDivisao.QuantidadeCoresQuantizadas = this.quantidadeCoresDivisao;
                 objQuantizadoDivisao.CoresQuantizadas = quantizaDivisao.RecuperaPaletaCorQuantizada();
 
                 
@@ -258,14 +253,14 @@ namespace QuantizaImagem
         {
             try
             {
-                quantizaOctree = new Octree(ImagemOriginal, quantidadeCoresDivisao);
+                quantizaOctree = new Octree(ImagemOriginal, this.quantidadeCoresDivisao);
                 var erro = new ErrodeQuantizacao(ImagemOriginal, quantizaOctree.ImagemQuantizada);
                 var histograma = new Frequencia();
                 objQuantizadoOctree = new Quantizacao();
 
 
                 objQuantizadoOctree.QuantidadeCoresOriginal = int.Parse(qtdCoresOriginal.Text);
-                objQuantizadoOctree.QuantidadeCoresQuantizadas = quantidadeCoresDivisao;
+                objQuantizadoOctree.QuantidadeCoresQuantizadas = this.quantidadeCoresDivisao;
                 objQuantizadoOctree.CoresQuantizadas = quantizaOctree.RecuperaPaletaCorQuantizada();
 
                 
@@ -343,6 +338,12 @@ namespace QuantizaImagem
         private void numQtdCores_ValueChanged(object sender, EventArgs e)
         {
             LimpaObjetos();
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var sobre = new Sobre();
+            sobre.ShowDialog();
         }
 
     }

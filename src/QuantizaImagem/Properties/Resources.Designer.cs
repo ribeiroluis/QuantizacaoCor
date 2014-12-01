@@ -59,5 +59,15 @@ namespace QuantizaImagem.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap puc_minas {
+            get {
+                object obj = ResourceManager.GetObject("puc-minas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -18,3 +18,4 @@ C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\Qua
 C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\QuantizaImagem\obj\Debug\QuantizaImagem.exe
 C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\QuantizaImagem\obj\Debug\QuantizaImagem.pdb
 C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\QuantizaImagem\obj\Debug\QuantizaImagem.QuantizaImagem.resources
+C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\QuantizaImagem\obj\Debug\QuantizaImagem.Sobre.resources

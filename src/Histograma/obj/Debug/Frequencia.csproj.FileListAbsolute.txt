@@ -1,5 +1,4 @@
 C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\Histograma\bin\Debug\Frequencia.dll
 C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\Histograma\bin\Debug\Frequencia.pdb
-C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\Histograma\obj\Debug\Frequencia.csprojResolveAssemblyReference.cache
 C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\Histograma\obj\Debug\Frequencia.dll
 C:\Users\luis.ribeiro\Source\Workspaces\Color-Quantization\ColorQuantization\Histograma\obj\Debug\Frequencia.pdb
